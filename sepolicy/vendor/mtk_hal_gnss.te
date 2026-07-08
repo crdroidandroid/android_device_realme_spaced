@@ -1,2 +1,6 @@
 type mtk_hal_gnss, domain;
 binder_call(system_app, mtk_hal_gnss)
+type mtk_hal_gnss_exec, exec_type, vendor_file_type, file_type;
+
+binder_call(system_app, mtk_hal_gnss)
+allow system_app mtk_hal_gnss:binder { call transfer };
